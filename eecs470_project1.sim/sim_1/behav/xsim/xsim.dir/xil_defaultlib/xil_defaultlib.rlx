@@ -1,0 +1,7 @@
+0.7
+2020.2
+Oct 14 2022
+05:07:14
+/home/bugs/vivado_projects/eecs470_project1/eecs470_project1.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,uvm,,,,,,
+/home/bugs/vivado_projects/eecs470_project1/eecs470_project1.srcs/sim_1/new/ps4_sim.sv,1677973896,systemVerilog,,,,ps4_sim,,uvm,,,,,,
+/home/bugs/vivado_projects/eecs470_project1/eecs470_project1.srcs/sources_1/new/ps4.sv,1677973355,systemVerilog,,/home/bugs/vivado_projects/eecs470_project1/eecs470_project1.srcs/sim_1/new/ps4_sim.sv,,ps4_assign;ps4_ifelse,,uvm,,,,,,

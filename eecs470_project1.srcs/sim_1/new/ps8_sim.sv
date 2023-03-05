@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 03/04/2023 06:32:36 PM
+// Create Date: 03/04/2023 08:12:05 PM
 // Design Name: 
-// Module Name: ps4_sim
+// Module Name: ps8_sim
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,17 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ps4_sim;
-    logic [3:0] req;
+module ps8_sim;
+    logic [7:0] req;
     logic  en;
-    logic [3:0] gnt;
-    logic [3:0] tb_gnt;
+    logic [7:0] gnt;
+    logic [7:0] tb_gnt;
     logic correct;
     logic [1:0] count;
     logic reset;
     logic clock;
 
-    ps4_2 ps4(.req(req), .en(en), .gnt(gnt));
+    ps8 ps8(.req(req), .en(en), .gnt(gnt));
 //    ps4_as ps4_assign(req(req), .en(en), .gnt(gnt));
 
     assign correct=(gnt==tb_gnt);
@@ -60,35 +60,48 @@ module ps4_sim;
         #6
         // CNT=0
         reset=0;
-        req=4'b0001;
+        req=8'b00000001;
         en=1;
-        tb_gnt=4'b0001;
+        tb_gnt=8'b00000001;
         #10
         // CNT=1
-        req=4'b0010;
+        req=8'b00000010;
         en=1;
-        tb_gnt=4'b0010;
+        tb_gnt=8'b00000010;
         #10
         // CNT=2
-        req=4'b0101;
-        tb_gnt=4'b0100;
+        req=8'b00000101;
+        tb_gnt=8'b00000100;
         #10
         // CNT=3
-        req=4'b0011;
-        tb_gnt=4'b0010;
+        req=8'b00000011;
+        tb_gnt=8'b00000010;
         #10
         // CNT=0
-        req=4'b1111;
-        tb_gnt=4'b1000;
+        req=8'b00001111;
+        tb_gnt=8'b00001000;
         #10
         // CNT=1
-        req=4'b0011;
-        tb_gnt=4'b0010;
+        req=8'b00011111;
+        tb_gnt=8'b00010000;
         #10
         // CNT=2
-        req=4'b0111;
-        tb_gnt=4'b0100;
+        req=8'b00110011;
+        tb_gnt=8'b00100000;
         #10
+
+        req=8'b01000111;
+        tb_gnt=8'b01000000;
+        #10
+
+        req=8'b10100101;
+        tb_gnt=8'b10000000;
+        #10
+
+        req=8'b11111111;
+        tb_gnt=8'b10000000;
+        #10
+        
         $finish;
      end // initial
 endmodule

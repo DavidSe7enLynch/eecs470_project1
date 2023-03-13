@@ -18,9 +18,6 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`include "rps2.sv"
-`include "counter.sv"
-
 
 module rps4(
     input [3:0] req, 
@@ -29,7 +26,7 @@ module rps4(
     input reset,
     output logic [3:0] gnt,
     output logic req_up,
-    output logic [1:0] count,
+    output logic [1:0] count
 );
     wire req_up_left, req_up_right;
     wire [1:0] enables;

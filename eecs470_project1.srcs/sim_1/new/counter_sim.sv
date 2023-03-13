@@ -35,10 +35,10 @@ module counter_sim(
     initial begin
         clock= 0;
         reset = 1;
-        #5
+        #15
         reset = 0;
 
-        #50;
+        #70;
         $finish;
 
     end
